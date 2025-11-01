@@ -1,0 +1,35 @@
+/* Floating icons animation and wrapper styles used by src/pages/Home.tsx */
+
+.floating-icon-wrapper {
+	position: absolute;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	pointer-events: none; /* icons shouldn't capture mouse events */
+	will-change: transform, opacity;
+}
+
+/* Slight shadow for contrast */
+.floating-icon {
+	filter: drop-shadow(0 4px 6px rgba(0,0,0,0.45));
+}
+
+@keyframes floatUpDown {
+	0% {
+		transform: translate(-50%, -50%) translateY(0) rotate(0deg);
+		opacity: 0.95;
+	}
+	50% {
+		transform: translate(-50%, -50%) translateY(-14px) rotate(8deg);
+		opacity: 1;
+	}
+	100% {
+		transform: translate(-50%, -50%) translateY(0) rotate(0deg);
+		opacity: 0.95;
+	}
+}
+
+/* smaller screens: reduce icon size visually by scaling wrapper */
+@media (max-width: 640px) {
+	.floating-icon-wrapper { transform-origin: center; }
+}
