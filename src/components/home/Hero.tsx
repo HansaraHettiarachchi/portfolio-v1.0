@@ -3,7 +3,7 @@ import image from "../../assets/images/basic/img-3.png"
 
 export default function Hero() {
     return (
-        <div className="lg:grid grid-cols-2 items-center">
+        <div className="lg:grid grid-cols-2 items-center ">
             <div className="flex items-center space-x-6">
                 <div className="relative top-5">
                     <div className="relative rounded-full h-4 aspect-square bg-purple-500"></div>
