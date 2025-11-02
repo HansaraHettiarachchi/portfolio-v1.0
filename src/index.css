@@ -1,4 +1,7 @@
-/* Floating icons animation and wrapper styles used by src/pages/Home.tsx */
+
+html{
+	scroll-behavior: smooth;
+}
 
 .floating-icon-wrapper {
 	position: absolute;
