@@ -38,7 +38,6 @@ export default function FloatingIcons({
 
   const ICONS = useMemo(() => {
     const base = icons && icons.length > 0 ? icons : defaultIcons
-    // repeat the base array `density` times to increase count
     const list: Array<React.ComponentType<any>> = []
     for (let i = 0; i < density; i++) list.push(...base)
     return list
@@ -49,29 +48,25 @@ export default function FloatingIcons({
   const particlesRef = useRef<Array<{ x: number; y: number; vx: number; vy: number; rot: number }>>([])
   const [portalEl, setPortalEl] = useState<HTMLElement | null>(null)
 
-  // initialize particle placeholders when ICONS change
   useEffect(() => {
     particlesRef.current = ICONS.map(() => ({ x: 0, y: 0, vx: 0, vy: 0, rot: 0 }))
   }, [ICONS.length])
 
-  // create a portal attached to the parent element so the overlay spans
-  // the full height of the Home design (not limited to viewport)
   useEffect(() => {
     const hostParent = containerRef.current?.parentElement
     if (!hostParent) return
 
-    // create portal container inside parent
     const el = document.createElement("div")
     el.className = "floating-icons-portal"
     el.style.position = "absolute"
     el.style.top = "0"
     el.style.left = "0"
     el.style.width = "100%"
-  // make it cover the visible height of the parent (avoid extra bottom gap)
-  el.style.height = `${hostParent.clientHeight}px`
+
+    el.style.height = `${hostParent.clientHeight}px`
     el.style.pointerEvents = "none"
     el.style.overflow = "hidden"
-    // ensure parent is a positioning context while mounted
+
     const prevPosition = hostParent.style.position
     if (getComputedStyle(hostParent).position === "static") {
       hostParent.style.position = "relative"
@@ -92,23 +87,18 @@ export default function FloatingIcons({
       window.removeEventListener("resize", update)
       mo.disconnect()
       if (el.parentNode) el.parentNode.removeChild(el)
-      // restore parent position
-      hostParent.style.position = prevPosition
+
+        hostParent.style.position = prevPosition
       setPortalEl(null)
     }
   }, [containerRef.current])
 
-  // main animation effect — binds to the element rendered in-place and
-  // constrains motion to the parent element bounds so the icons float
-  // only over the Home design where this component is mounted.
   useEffect(() => {
-    // only run when portalEl has been created and attached to the parent
     if (!portalEl) return
 
     const boundsEl = portalEl.parentElement ?? portalEl
     const bounds = () => boundsEl.getBoundingClientRect()
 
-    // initialize positions within parent bounds
     const { width, height } = bounds()
     particlesRef.current.forEach((p) => {
       p.x = Math.random() * width
@@ -155,7 +145,7 @@ export default function FloatingIcons({
     rafId = requestAnimationFrame(tick)
 
     const ro = new ResizeObserver(() => {
-      // update portal height to match parent visible height changes
+
       portalEl.style.height = `${boundsEl.clientHeight}px`
     })
     ro.observe(boundsEl)
@@ -166,9 +156,6 @@ export default function FloatingIcons({
     }
   }, [ICONS.length, speed, portalEl])
 
-  // render into the portal attached to the parent so the overlay covers
-  // the full Home design. If portalEl is not ready yet, render a
-  // zero-sized placeholder so we can detect the parent element.
   const overlay = (
     <div className="pointer-events-none overflow-hidden" style={{ position: "relative", width: "100%", height: "100%" }}>
       {ICONS.map((Icon, idx) => (
@@ -197,7 +184,6 @@ export default function FloatingIcons({
 
   return (
     <>
-      {/* placeholder to find parent element */}
       <div
         ref={(el) => {
           containerRef.current = el
