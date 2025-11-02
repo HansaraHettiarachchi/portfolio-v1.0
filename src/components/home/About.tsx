@@ -1,7 +1,7 @@
 
 export default function About() {
     return (
-        <div className="">
+        <div className="" id="about">
             <h1 className="text-xl text-slate-500 uppercase">Introduction</h1>
             <h1 className="text-6xl font-bold text-white">Overview</h1>
 

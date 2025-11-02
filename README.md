@@ -1,73 +1,96 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 🎨 Hansara's Portfolio
 
-Currently, two official plugins are available:
+Welcome to my personal portfolio — a space where creativity meets code! 🚀
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This repository contains my frontend portfolio built with React + TypeScript and Vite. It's designed to showcase projects, skills, and some fun animations. ✨
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🧾 What you'll find here
 
-## Expanding the ESLint configuration
+- A modern, responsive portfolio site built with React + TypeScript and Vite.
+- TailwindCSS-inspired utilities and GSAP for subtle animations.
+- Clean components and routes to showcase projects, about section, and contact info.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🛠 Tech stack
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- React (TypeScript) ⚛️
+- Vite (dev server & build) ⚡
+- TailwindCSS / utility-first styling 🌬️
+- GSAP for animations ✨
+- React Router for page navigation 🧭
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## 🚀 Features
+
+- Hero section with animated elements
+- About / Skills section
+- Projects gallery / case studies
+- Responsive layout (mobile-first)
+- Easy to extend — add new projects or sections quickly
+
+---
+
+## ▶️ Run locally (Windows / PowerShell)
+
+Make sure you have Node.js installed (recommended LTS). Then in the project root run:
+
+```powershell
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- Start dev server: `npm run dev` (uses Vite)
+- Build for production: `npm run build` (runs TypeScript build and Vite build)
+- Preview production build locally: `npm run preview`
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+These scripts come from the project's `package.json`.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+
+## 📁 Project structure (high level)
+
+- `src/` — main source code
+	- `components/` — reusable UI pieces
+	- `pages/` — top-level routes (Home, About, Projects...)
+	- `assets/` — images and static assets
+- `index.html` — app entry HTML
+- `vite.config.ts` — Vite configuration
+
+---
+
+## 📸 Screenshots / Preview
+
+Add screenshots (or a GIF) of the live site in `public/` and reference them here for a quick visual.
+
+---
+
+## ✍️ How to contribute
+
+1. Fork the repo
+2. Create a feature branch: `git checkout -b feat/my-feature`
+3. Commit your changes: `git commit -m "feat: add ..."`
+4. Push and open a PR
+
+Keep changes small and focused. I appreciate design and accessibility improvements! ♿️
+
+---
+
+## 📬 Contact
+
+- GitHub: [HansaraHettiarachchi](https://github.com/HansaraHettiarachchi)
+- Email: add-your-email@example.com (replace with your preferred contact)
+
+---
+
+## 📜 License
+
+This project is open source — add a license file if you'd like to specify the terms (e.g. MIT).
+
+---
+
+Thanks for visiting — enjoy the code! 🌟

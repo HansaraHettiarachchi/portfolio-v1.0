@@ -7,13 +7,13 @@ export default function Hero() {
             <div className="flex items-center space-x-6">
                 <div className="relative top-5">
                     <div className="relative rounded-full h-4 aspect-square bg-purple-500"></div>
-                    <div className="relative w-2 mx-auto bottom-1.5 h-85 bg-linear-to-b  from-purple-500"></div>
+                    <div className="relative w-2 mx-auto bottom-1.5 h-100 bg-linear-to-b  from-purple-500"></div>
                 </div>
 
                 <div className="text-white max-w-xl ">
                     <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
                         Hi, I'm
-                        <span className="bg-linear-to-br from-yellow-500 via-purple-500 to-orange-500 text-transparent bg-clip-text"> Hansara</span>
+                        <span className="bg-linear-to-br from-yellow-500 via-purple-500 to-orange-500 text-transparent bg-clip-text"> Hansara Hettiarachchi</span>
                     </h1>
 
                     <p className="mt-6 text-base sm:text-lg font-medium leading-relaxed text-gray-300">
