@@ -7,8 +7,9 @@ import NavBar from "../components/NavBar/NavBar"
 export default function Home() {
     return (
         <>
-            <FloatingIcons iconColor="#173857" iconSize={24} speed={200} density={3} />
-            <div className="overflow-visible font-sans" id="">
+            <FloatingIcons iconColor="#173857" iconSize={30} speed={150} density={2.5} />
+
+            <div className="overflow-visible font-sans  " id="">
                 <NavBar />
                 {/* <div className="xl:px-25 px-4 sm:px-6 lg:px-8 "> */}
                 <div className="container mx-auto px-6 ">

@@ -1,7 +1,28 @@
+import fullstack_img from "../../assets/images/basic/fullstack.png"
+import frontend_img from "../../assets/images/basic/front-end.png"
+import backend_img from "../../assets/images/basic/backend.png"
+import react_img from "../../assets/images/basic/react.png"
+
+const jobs = [
+    {
+        name: "Front end Developer",
+        img: fullstack_img
+    }, {
+        name: "Backend Developer",
+        img: backend_img
+    },
+    {
+        name: "React / React Native Developer",
+        img: react_img
+    },
+    {
+        name: "Fullstack Developer",
+        img: frontend_img
+    }];
 
 export default function About() {
     return (
-        <div className="" id="about">
+        <div className="relative" id="about">
             <h1 className="text-xl text-slate-500 uppercase">Introduction</h1>
             <h1 className="text-6xl font-bold text-white">Overview</h1>
 
@@ -17,6 +38,29 @@ export default function About() {
                 </p>
             </div>
 
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 my-15 items-center justify-center">
+
+                {jobs.map((job, i) => (
+
+                    <div key={i} className="rounded-3xl">
+                        <div className="relative">
+                            <div className="absolute -inset-1 rounded-lg bg-gradient-to-tr from-slate-600 via-indigo-600 to-violet-600 opacity-60 blur-lg animate-gradient-x bg-[length:200%_200%]"></div>
+
+                            <div className="relative border h-64 border-zinc-700 rounded-lg flex items-center text-slate-300 bg-linear-to-br from-[#0b0516] ">
+                                <div className="mx-auto">
+                                    <img src={job.img} className="w-20 mx-auto" alt="" />
+                                    <h1 className="text-md font-bold mx-10 mt-5 text-center">{job.name}</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                ))}
+
+
+
+
+
+            </div>
 
         </div>
     )
