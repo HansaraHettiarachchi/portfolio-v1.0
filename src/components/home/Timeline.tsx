@@ -4,6 +4,7 @@ type TimelineData = {
     title: string;
     institute: string;
     content: string[];
+    skills: string[];
     date: string;
 }
 
@@ -11,19 +12,34 @@ const timelineData: TimelineData[] = [
     {
         side: 'left',
         title: 'Certificate in Software Engineering',
-        institute: 'NIBM',
+        institute: 'At NIBM',
         content: [
-            "Leraned my first programming language C#.net",
-            "Leraned MS Sql Database",
-            "Created small CRUD application using them",
+            "Learned my first programming language: C#.NET",
+            "Learned to work with Microsoft SQL Server",
+            "Developed a small CRUD application using C#.NET and SQL Server",
         ],
+        skills: ["C#.net", "MS SQL"],
         date: "April 2022 - Nov 2022"
     },
     {
         side: 'right',
+        title: 'Started BSc (Hons) in Software Engineering',
+        institute: 'At JIAT Affiliated with Birmingham City University',
+        content: [
+            "Completed Diploma awarded by UK Awards",
+            "Completed Higher Diploma awarded by UK Awards",
+            "Commenced BSc studies at Birmingham City University",
+            "Developed several real word projects with gathered skills",
+        ],
+        skills: ["Java", "php", "HTML", "CSS", "JavaScript", "JQuery", "Bootstrap", "MySQL", "OOP", "JSP", "React Native", "OOPC", "OODP"],
+        date: "May 2023 - Now"
+    },
+    {
+        side: 'left',
         title: 'Lorem ipsum',
         institute: 'NIBM',
         content: [],
+        skills: [],
         date: "April 2022 - Nov 2022"
     },
     {
@@ -31,13 +47,7 @@ const timelineData: TimelineData[] = [
         title: 'Lorem ipsum',
         institute: 'NIBM',
         content: [],
-        date: "April 2022 - Nov 2022"
-    },
-    {
-        side: 'left',
-        title: 'Lorem ipsum',
-        institute: 'NIBM',
-        content: [],
+        skills: [],
         date: "April 2022 - Nov 2022"
     },
     {
@@ -45,6 +55,7 @@ const timelineData: TimelineData[] = [
         title: 'Lorem ipsum',
         institute: 'NIBM',
         content: [],
+        skills: [],
         date: "April 2022 - Nov 2022"
     },
 ];
@@ -71,11 +82,11 @@ export default function () {
                             </div>
                         )}
                         <div
-                            className={`bg-[#080946]  ${item.side === 'left' ? 'col-start-1 col-end-5 mr-auto md:ml-auto' : 'col-start-6 col-end-10 mr-auto'
+                            className={`bg-[#080946]  ${item.side === 'left' ? 'col-start-1 col-end-5 mr-auto ml-0 md:ml-auto md:mr-0' : 'col-start-6 col-end-10 mr-auto'
                                 } px-6 py-4 rounded-xl my-4 shadow-md text-shadow-blue-300`}
                         >
                             <h3 className="font-bold text-xl mb-1">{item.title}</h3>
-                            <h3 className="font-semibold text-md mb-1 text-slate-600 tracking-widest">{item.institute}</h3>
+                            <h3 className="font-semibold text-md mb-1 text-slate-600 tracking-wider">{item.institute}</h3>
                             {/* <p className=" text-justify">{item.content}</p> */}
 
                             <ol className="list-disc ms-6 font-medium text-slate-300">
@@ -84,7 +95,21 @@ export default function () {
                                 ))}
                             </ol>
 
-                            <p className="text-slate-600 font-medium text-start mt-3">{item.date}</p>
+                            {item.skills.length !== 0 && (
+                                <div className="flex flex-wrap gap-2 items-center mt-5">
+                                    {item.skills.map((skill, index) => (
+                                        <div
+                                            key={index}
+                                            className="rounded-full bg-blue-800 text-white py-1 px-3 text-sm"
+                                        >
+                                            {skill}
+                                        </div>
+                                    ))}
+                                </div>
+                            )}
+
+
+                            <p className="text-slate-600 font-medium text-start mt-3 italic">{item.date}</p>
                         </div>
                         {item.side === 'left' && (
                             <div className="col-start-5 col-end-6 md:mx-auto relative mr-10">
