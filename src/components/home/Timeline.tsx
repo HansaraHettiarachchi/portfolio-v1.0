@@ -7,6 +7,10 @@ type TimelineData = {
     skills: string[];
     date: string;
     type: string;
+    images?: {
+        img: string;
+        link: string;
+    }[];
 }
 
 const timelineData: TimelineData[] = [
@@ -35,7 +39,7 @@ const timelineData: TimelineData[] = [
         ],
         type: "Skills :",
         skills: ["Java", "php", "HTML", "CSS", "JavaScript", "JQuery", "Bootstrap", "MySQL", "OOP", "JSP", "React Native", "OOPC", "OODP"],
-        date: "May 2023 - Now"
+        date: "May 2023 - Present"
     },
     {
         side: 'right',
@@ -85,19 +89,141 @@ const timelineData: TimelineData[] = [
     },
     {
         side: 'right',
-        title: 'Fully Functional Institute Management System',
-        institute: 'At JIAT',
+        title: 'Collaborated Spring Boot Project',
+        institute: 'With Mr. Shaleen Thilanka',
         content: [
-            "",
-            "",
-            "",
-            "",
-            "",
+            "Migrated a legacy C#.NET backend system to a modern Spring Boot architecture.",
+            "Utilized JDBC Template to connect with a large-scale Microsoft SQL Server database.",
+            "Developed both paginated and non-paginated RESTful endpoints following layered architecture principles."
         ],
         type: "Learned Skills and Tech Stack :",
-        skills: ["Python", "TensorFlow", "Keras", "Java", "OpenCV", "DeepFace"],
+        skills: ["JDBC Template", "Spring Boot", "C#.NET", "REST"],
+        date: "March 2025 – April 2025"
+    },
+    {
+        side: 'left',
+        title: 'Intern Software Engineer',
+        institute: 'Chiox Software Solutions',
+        content: [
+            "Assisted in frontend and backend development using HTML, CSS, JavaScript, PHP, and Laravel.",
+            "Contributed to UI enhancements and bug fixes across multiple client-facing modules.",
+            "Collaborated with senior developers to understand Laravel architecture and MVC patterns.",
+            "Gained hands-on experience in deploying and testing web applications in a production environment."
+        ],
+        type: "Tech Stack :",
+        skills: ["HTML", "CSS", "JavaScript", "PHP", "Laravel"],
+        date: "May 2025 – Jul 2025"
+    },
+    {
+        side: 'right',
+        title: 'Adora E-Commerce Web Application',
+        institute: 'Collaborative project with multiple developers',
+        content: [
+            "Led the development team and guided contributors to achieve project goals effectively.",
+            "Independently designed the Entity Relationship Diagram (ERD) for the entire system.",
+            "Managed the project workflow and resolved implementation issues introduced by contributors.",
+            "Redesigned several UI components to improve usability and consistency.",
+            "Developed the backend using a layered architecture with Node.js, Express, Prisma, and MySQL."
+        ],
+        type: "Learned Skills and Tech Stack :",
+        skills: ["React", "TypeScript", "Node.js", "Express.js", "Prisma", "MySQL"],
+        date: "01 Aug 2024 – 25 Aug 2025"
+    },
+    {
+        side: 'right',
+        title: 'Saddha Web Front-End',
+        institute: 'By Myself',
+        content: [
+            "Designed the front-end based on a Figma prototype.",
+            "Self-studied Next.js and Tailwind CSS to build responsive UI components.",
+            "Developed and styled the full layout using modern frontend practices."
+        ],
+        type: "Learned Skills and Tech Stack :",
+        skills: ["Next.js", "Tailwind"],
+        date: "27 Aug 2025 – 29 Aug 2025"
+    },
+    {
+        side: 'right',
+        title: 'Spring Boot Backend – Adora E-Commerce Application',
+        institute: 'By Myself',
+        content: [
+            "Developed the backend for the Adora E-Commerce frontend using Spring Boot.",
+            "Implemented JWT-based authentication and integrated Spring Security for role-based access control.",
+            "Designed RESTful APIs following layered architecture principles.",
+            "Handled user registration, login, and protected routes with token validation.",
+            "Tested endpoints using Postman and ensured secure data flow across the system."
+        ],
+        type: "Learned Skills and Tech Stack :",
+        skills: ["Spring Boot", "Spring Security", "JWT", "REST", "Postman"],
         date: "Jul 2024 – Jan 2025"
     },
+    {
+        side: 'left',
+        title: 'Full-Stack React with Spring Boot Certification',
+        institute: 'By Pearson on Coursera',
+        content: [
+            "Completed a comprehensive full-stack development course covering both frontend and backend technologies.",
+            "Studied core principles and methodologies behind request handling and screen flow in Spring Boot.",
+            "Learned how React DOM works and how it efficiently updates and renders UI components.",
+            "Worked with MongoDB for data persistence and implemented full CRUD operations across the stack."
+        ],
+        type: "Learned Skills :",
+        skills: ["Spring Boot", "Spring Security", "JWT", "React", "MongoDB", "REST", "Postman"],
+        date: "September 16, 2025"
+    },
+    {
+        side: 'left',
+        title: 'OCI 2025 Certified AI Foundations Associate',
+        institute: 'Oracle Race to Certification Program',
+        content: [
+            "Earned the OCI AI Foundations Associate certification through Oracle's Race to Certification 2025 initiative.",
+            "Studied core concepts of Artificial Intelligence, Machine Learning, Deep Learning, and Generative AI.",
+            "Explored practical applications of AI using Oracle Cloud Infrastructure (OCI) services.",
+            "Completed free digital training and passed the official certification exam (1Z0-1122-25).",
+            "Gained foundational knowledge in deploying and managing AI solutions on OCI."
+        ],
+        type: "Learned Skills :",
+        skills: [
+            "Python", "OCI", "GenAI", "Vector DB", "Select AI",
+            "Machine Learning", "Deep Learning", "Model Evaluation",
+            "Prompt Engineering", "AI Use Cases", "OCI Data Science"
+        ],
+        date: "20 October 2025"
+    },
+    {
+        side: 'left',
+        title: 'OCI 2025 Certified Generative AI Professional',
+        institute: 'By Myself',
+        content: [
+            "Earned the OCI Generative AI Professional certification by completing Oracle's Race to Certification 2025 program.",
+            "Studied advanced Generative AI concepts including Large Language Models (LLMs), Retrieval-Augmented Generation (RAG), and AI agents.",
+            "Gained hands-on experience with Oracle Cloud Infrastructure (OCI) services for building and deploying GenAI applications.",
+            "Explored prompt engineering, model fine-tuning, and responsible AI practices.",
+            "Passed the official certification exam (1Z0-1127-25) demonstrating proficiency in applying GenAI solutions on OCI."
+        ],
+        type: "Learned Skills",
+        skills: [
+            "Generative AI", "LLMs", "RAG", "Prompt Engineering", "OCI AI Services",
+            "Model Fine-Tuning", "AI Agents", "Responsible AI", "Python", "Oracle Cloud"
+        ],
+        date: "22 October 2025"
+    },
+    {
+        side: 'right',
+        title: 'Beauty Salon E-Commerce Web',
+        institute: 'At Kaleox Software Solutions',
+        content: [
+            "Initiated a collaborative project to help aspiring developers gain hands-on experience through real-world development.",
+            "Defined the project scope and provided guidance to contributors, allowing them to apply and grow their skills.",
+            "Created a free-to-join environment where developers could build, learn, and showcase their work on their CVs.",
+            "Supported contributors through challenges and ensured quality across both frontend and backend development.",
+            "Built the application using React with TypeScript and Tailwind CSS for the frontend, and Spring Boot for the backend."
+        ],
+        type: "Learned Skills and Tech Stack",
+        skills: ["React", "TypeScript", "Tailwind CSS", "Spring Boot", "Project Management", "Mentorship"],
+        date: "28 Oct 2025 – Present"
+    }
+
 ];
 
 export default function () {
