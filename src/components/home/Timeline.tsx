@@ -6,6 +6,7 @@ type TimelineData = {
     content: string[];
     skills: string[];
     date: string;
+    type: string;
 }
 
 const timelineData: TimelineData[] = [
@@ -18,11 +19,12 @@ const timelineData: TimelineData[] = [
             "Learned to work with Microsoft SQL Server",
             "Developed a small CRUD application using C#.NET and SQL Server",
         ],
+        type: "Skills :",
         skills: ["C#.net", "MS SQL"],
         date: "April 2022 - Nov 2022"
     },
     {
-        side: 'right',
+        side: 'left',
         title: 'Started BSc (Hons) in Software Engineering',
         institute: 'At JIAT Affiliated with Birmingham City University',
         content: [
@@ -31,32 +33,70 @@ const timelineData: TimelineData[] = [
             "Commenced BSc studies at Birmingham City University",
             "Developed several real word projects with gathered skills",
         ],
+        type: "Skills :",
         skills: ["Java", "php", "HTML", "CSS", "JavaScript", "JQuery", "Bootstrap", "MySQL", "OOP", "JSP", "React Native", "OOPC", "OODP"],
         date: "May 2023 - Now"
     },
     {
-        side: 'left',
-        title: 'Lorem ipsum',
-        institute: 'NIBM',
-        content: [],
-        skills: [],
-        date: "April 2022 - Nov 2022"
+        side: 'right',
+        title: 'Gymnasium Management System 1.0V',
+        institute: 'For Country Fitness Gymnasium',
+        content: [
+            "Developed a responsive system to manage members, schedules, payments, and employee salaries.",
+            "Implemented secure user roles and access control for efficient administration.",
+            "Automated monthly financial and performance reporting.",
+            "Optimized database structure for scalability and fast data retrieval.",
+            "Provided training and documentation for smooth system adoption."
+        ],
+        type: "Techstack :",
+        skills: ["HTML", "CSS", "JavaScript", "PHP", "Bootstrap", "jQuery"],
+        date: "April 2024 – November Jul"
     },
     {
         side: 'left',
-        title: 'Lorem ipsum',
-        institute: 'NIBM',
-        content: [],
-        skills: [],
-        date: "April 2022 - Nov 2022"
+        title: 'React, TypeScript & Spring Boot',
+        institute: 'Self-Studied',
+        content: [
+            "Self-taught using AI tools, YouTube tutorials, and technical blogs as primary learning resources.",
+            "Gained hands-on experience with React, TypeScript, Axios, and animation libraries like Framer Motion.",
+            "Built and tested RESTful APIs using Spring Boot and Postman.",
+            "Explored monolithic and layered architecture patterns in backend development.",
+            "Developed a full-stack CRUD application applying learned concepts across frontend and backend."
+        ],
+        type: "Skills :",
+        skills: ["Spring Boot", "React", "TypeScript", "Postman", "Monolithic Architecture", "Layered Architecture"],
+        date: "Aug 2022 – Oct 2024"
     },
     {
         side: 'right',
-        title: 'Lorem ipsum',
-        institute: 'NIBM',
-        content: [],
-        skills: [],
-        date: "April 2022 - Nov 2022"
+        title: 'Fully Functional Institute Management System',
+        institute: 'At JIAT',
+        content: [
+            "Integrated facial recognition attendance using Python and the DeepFace library for real-time identity verification.",
+            "Self-studied Python and explored libraries such as TensorFlow, OpenCV, Keras, and DeepFace to build and train models.",
+            "Established communication between a Java-based frontend and Python scripts via tunneling to handle image classification.",
+            "Fine-tuned ResNet models to enhance recognition accuracy, achieving approximately 70% success in identifying individuals.",
+            "Implemented core institute management features including user roles, class scheduling, salary tracking, and student-teacher records.",
+            "Focused on modular architecture for scalability and maintainability, applying layered and monolithic design principles."
+        ],
+        type: "Learned Skills and Tech Stack :",
+        skills: ["Python", "TensorFlow", "Keras", "Java", "OpenCV", "DeepFace"],
+        date: "Jul 2024 – Jan 2025"
+    },
+    {
+        side: 'right',
+        title: 'Fully Functional Institute Management System',
+        institute: 'At JIAT',
+        content: [
+            "",
+            "",
+            "",
+            "",
+            "",
+        ],
+        type: "Learned Skills and Tech Stack :",
+        skills: ["Python", "TensorFlow", "Keras", "Java", "OpenCV", "DeepFace"],
+        date: "Jul 2024 – Jan 2025"
     },
 ];
 
@@ -96,15 +136,19 @@ export default function () {
                             </ol>
 
                             {item.skills.length !== 0 && (
-                                <div className="flex flex-wrap gap-2 items-center mt-5">
-                                    {item.skills.map((skill, index) => (
-                                        <div
-                                            key={index}
-                                            className="rounded-full bg-blue-800 text-white py-1 px-3 text-sm"
-                                        >
-                                            {skill}
-                                        </div>
-                                    ))}
+                                <div>
+                                    <h1 className="mt-2 mb-1 text-gray-300 font-semibold">{item.type}</h1>
+                                    <div className="flex flex-wrap gap-2 items-center">
+
+                                        {item.skills.map((skill, index) => (
+                                            <div
+                                                key={index}
+                                                className="rounded-full bg-blue-800 text-white py-1 px-3 text-sm"
+                                            >
+                                                {skill}
+                                            </div>
+                                        ))}
+                                    </div>
                                 </div>
                             )}
 

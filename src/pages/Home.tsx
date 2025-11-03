@@ -8,7 +8,7 @@ import Timeline from "../components/home/Timeline"
 export default function Home() {
     return (
         <>
-            <FloatingIcons iconColor="#173857" iconSize={30} speed={150} density={2.5} />
+            <FloatingIcons iconColor="#173857" iconSize={30} speed={150} density={10} />
 
             <div className="overflow-visible font-sans  " id="">
                 <NavBar />
