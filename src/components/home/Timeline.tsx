@@ -1,8 +1,13 @@
 import oci_foundations_associate from "../../assets/images/certificates/oci_ai_fundation_associate.jpg";
-import oci_gen_ai_professional from "../../assets/images/certificates/oci_gen_ai_professional.jpg";
-import oci_gen_ai_professional_badge from "../../assets/images/certificates/oci_ai_fundations_associate_badge.png";
 import oci_foundations_associate_badge from "../../assets/images/certificates/oci_ai_fundations_associate_badge.png";
+import oci_gen_ai_professional from "../../assets/images/certificates/oci_gen_ai_professional.jpg";
+import oci_gen_ai_professional_badge from "../../assets/images/certificates/oci_gen_ai_professional_badge.png";
+import coursera_springboot_certificate from "../../assets/images/certificates/springboot_react_cosera_certificate.jpeg";
 import { GiTiredEye } from "react-icons/gi";
+import ImageViewerModal from "./subcomponents/ImageViewerModal";
+import { useState } from "react";
+
+type Image = { img: string; link: string; }
 
 type TimelineData = {
     side: string;
@@ -12,7 +17,7 @@ type TimelineData = {
     skills: string[];
     date: string;
     type: string;
-    images?: { img: string; link: string; }[];
+    images?: Image[];
 }
 
 const timelineData: TimelineData[] = [
@@ -171,7 +176,13 @@ const timelineData: TimelineData[] = [
         ],
         type: "Skills:",
         skills: ["Spring Boot", "Spring Security", "JWT", "React", "MongoDB", "REST", "Postman"],
-        date: "September 16, 2025"
+        date: "September 16, 2025",
+        images: [
+            {
+                img: coursera_springboot_certificate,
+                link: "https://coursera.org/share/8cfb931c92a87c0299fd015addb93638"
+            }
+        ]
     },
     {
         side: 'left',
@@ -214,6 +225,16 @@ const timelineData: TimelineData[] = [
             "Generative AI", "LLMs", "RAG", "Prompt Engineering", "OCI AI Services",
             "Model Fine-Tuning", "AI Agents", "Responsible AI", "Python", "Oracle Cloud"
         ],
+        images: [
+            {
+                img: oci_gen_ai_professional,
+                link: ""
+            },
+            {
+                img: oci_gen_ai_professional_badge,
+                link: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=FD1589F3924B87C33B9EDA854B838A0F6921E6EBD869B5E6166C4113129791AC"
+            }
+        ],
         date: "22 October 2025"
     },
     {
@@ -235,10 +256,13 @@ const timelineData: TimelineData[] = [
 
 
 export default function () {
+    const [showImageViewerModal, setShowImageViewerModal] = useState<boolean>(false);
+    const [selectedImage, setSelectedImage] = useState<Image>({ img: '', link: '' });
+
     return (
         <div className='' id='edu&exp'>
-            <h1 className="text-xl text-slate-500 uppercase text-center">What I have done so far</h1>
-            <h1 className="text-6xl font-extrabold text-center mt-1 text-white">Work Experience</h1>
+            <h1 className="text-md md:text-xl text-slate-500 uppercase text-center">What I have done so far</h1>
+            <h1 className="text-3xl md:text-6xl font-extrabold text-center mt-1 text-white">Qualifications & Experience</h1>
 
 
             <div className="flex flex-col md:grid grid-cols-9 mx-auto p-2 text-blue-50 mt-20">
@@ -288,19 +312,24 @@ export default function () {
 
                             {item.images?.length !== 0 && (
                                 <div className="flex flex-wrap p-5 gap-3">
-                                        {item.images?.map((img, i) => (
-                                            <div key={i} className="w-32 h-24 rounded overflow-hidden shadow-sm relative group cursor-pointer">
-                                                <div
-                                                    className="w-full h-full bg-center bg-cover"
-                                                    style={{ backgroundImage: `url(${img.img})` }}
-                                                    role="img"
-                                                    aria-label={img.link ? 'certificate' : 'image'}
-                                                />
-                                                <div className="absolute inset-0 flex items-center justify-center bg-gray-300/80 opacity-0 group-hover:opacity-100 transition-opacity">
-                                                    <span className="text-sm font-semibold text-gray-800"><GiTiredEye size={40} /></span>
-                                                </div>
+                                    <ImageViewerModal img={selectedImage.img} verifyLink={selectedImage.link} setOpen={() => setShowImageViewerModal(false)} open={showImageViewerModal} />
+                                    {item.images?.map((img, i) => (
+                                        <div key={i} className="w-32 h-24 rounded overflow-hidden shadow-sm relative group cursor-pointer">
+                                            <div
+                                                className="w-full h-full bg-center bg-cover"
+                                                style={{ backgroundImage: `url(${img.img})` }}
+                                                role="img"
+                                                aria-label={img.link ? 'certificate' : 'image'}
+                                            />
+
+                                            <div className="absolute inset-0 flex items-center justify-center bg-gray-300/80 opacity-0 group-hover:opacity-100 transition-opacity" onClick={() => {
+                                                setSelectedImage(img);
+                                                setShowImageViewerModal(true)
+                                            }}>
+                                                <span className="text-sm font-semibold text-gray-800" ><GiTiredEye size={40} /></span>
                                             </div>
-                                        ))}
+                                        </div>
+                                    ))}
                                 </div>
                             )}
 
