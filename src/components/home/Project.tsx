@@ -14,51 +14,52 @@ interface ProjectCardProps {
 const projects: ProjectCardProps[] = [
     {
         title: "Adora E-Commerce Web Application",
-        description: "A full-featured e-commerce platform with secure payment integration, real-time inventory management, and advanced search functionality. Built with modern tech stack for optimal performance.",
-        tags: ["React", "TypeScript", "MySQL", "Bootstrap", "Node.js", "Exprese.js", "Prisma"],
+        description: "A complete e-commerce web application built using React, TypeScript, and Bootstrap for the frontend, and Node.js, Express.js, Prisma, and MySQL for the backend. Includes product catalog, cart, wishlist, authentication, and admin dashboard. Designed to demonstrate full-stack development skills.",
+        tags: ["React", "TypeScript", "Bootstrap", "Node.js", "Express.js", "Prisma", "MySQL"],
         githubLink: "https://github.com/HansaraHettiarachchi/Adora-project.git",
         liveLink: "https://hansarahettiarachchi.github.io/Adora-project/",
         gradient: "from-purple-400 via-purple-700 to-sky-600"
     },
     {
         title: "Adora E-Commerce - SpringBoot Backend",
-        description: "Enterprise Resource Planning system with modules for inventory, HR, finance, and analytics. Features role-based access control and real-time dashboards for business insights.",
-        tags: ["SpringBoot", "MySQL"],
+        description: "Spring Boot backend developed to complement the Adora frontend and showcase enterprise-grade backend development. Features include RESTful APIs, JWT authentication, role-based access, and MySQL integration. Created to gain hands-on experience with Spring Boot and backend architecture.",
+        tags: ["SpringBoot", "MySQL", "JWT", "REST API", "Spring Security"],
         githubLink: "https://github.com/HansaraHettiarachchi/Adora-Spring-Boot-Backend.git",
         gradient: "from-teal-400 via-cyan-600 to-blue-600"
     },
     {
         title: "Saddha Web Front End",
-        description: "Face recognition-based attendance tracking system with real-time detection, automated reporting, and comprehensive analytics dashboard. Includes mobile app for field employees.",
-        tags: ["Next.js", "Tailwind"],
+        description: "Frontend-only application built with Next.js and Tailwind CSS for a face recognition-based attendance system. Designed to integrate with a Python backend, it features real-time detection, attendance logging, and analytics dashboard.",
+        tags: ["Next.js", "Tailwind CSS", "TypeScript"],
         githubLink: "https://github.com/HansaraHettiarachchi/saddha-project-frontend.git",
         liveLink: "https://saddha-project-frontend.vercel.app/",
         gradient: "from-pink-400 via-rose-600 to-orange-600"
     },
     {
         title: "Gymnasium Management System",
-        description: "Collaborative project management tool with real-time updates, team communication, file sharing, and advanced task tracking. Includes Kanban boards and Gantt charts.",
-        tags: ["php", "Mysql", "HTML", "CSS", "Js", "Bootstrap", "JQuery"],
+        description: "A PHP-based management system built for Country Fitness Gymnasium to handle daily operations. Includes modules for member registration, scheduling, payments, staff management, and expense tracking. Developed with Bootstrap, jQuery, and PHPMailer integration.",
+        tags: ["PHP", "MySQL", "HTML", "CSS", "JavaScript", "Bootstrap", "jQuery", "PHPMailer"],
         githubLink: "https://github.com/HansaraHettiarachchi/GYM.git",
         liveLink: "http://hansarahettiarachchi.space/",
         gradient: "from-indigo-400 via-purple-600 to-pink-600"
     },
     {
         title: "Beauty Saloon E-Commerce Web",
-        description: "A full-featured e-commerce platform with secure payment integration, real-time inventory management, and advanced search functionality. Built with modern tech stack for optimal performance.",
-        tags: ["React", "TypeScript", "MySQL", "Tailwind", "Springboot"],
+        description: "📍 At Kaleox Software Solutions — An open-source collaborative project aimed at helping aspiring developers gain real-world experience. Led project scope definition and mentored contributors. Built with React, TypeScript, and Tailwind CSS for the frontend, and Spring Boot for the backend. Designed to be a free-to-join platform for learning and portfolio building.",
+        tags: ["React", "TypeScript", "Tailwind CSS", "SpringBoot"],
         githubLink: "https://github.com/HansaraHettiarachchi/project-beauty-salon-front-end.git",
         liveLink: "https://project-beauty-salon-front-end.vercel.app/",
         gradient: "from-purple-400 via-purple-700 to-sky-600"
     },
     {
         title: "Institute Management System",
-        description: "Enterprise Resource Planning system with modules for inventory, HR, finance, and analytics. Features role-based access control and real-time dashboards for business insights.",
-        tags: ["Java Swing", "MySQL", "Python", "Deepface", "Tenserflow", "OpenCv", "Machine Learning"],
+        description: "An ERP system for educational institutes with facial recognition-based attendance marking. Built using Java Swing for UI and Python (DeepFace, OpenCV, TensorFlow) for detection. Includes modules for student management and daily operations.",
+        tags: ["Java Swing", "Python", "MySQL", "DeepFace", "TensorFlow", "OpenCV", "Machine Learning"],
         githubLink: "https://github.com/HansaraHettiarachchi/Institute-Management-System.git",
         gradient: "from-teal-400 via-cyan-600 to-blue-600"
-    },
+    }
 ];
+
 
 function ProjectCard({ title, description, tags, githubLink, liveLink, gradient }: ProjectCardProps) {
     return (
