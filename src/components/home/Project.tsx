@@ -62,30 +62,30 @@ const projects: ProjectCardProps[] = [
 
 function ProjectCard({ title, description, tags, githubLink, liveLink, gradient }: ProjectCardProps) {
     return (
-        <div className="group relative rounded-xl transition-all duration-300 hover:-translate-y-2">
+        <div className="group relative rounded-xl transition-all duration-300 hover:-translate-y-2 w-full">
             {/* Glow Effect */}
             <div className={`absolute -inset-px rounded-xl bg-linear-to-l ${gradient} opacity-40 blur-md group-hover:opacity-70 transition-opacity duration-300`}></div>
 
             {/* Card Border */}
             <div className={`p-px rounded-xl bg-linear-to-r ${gradient}`}>
-                <div className="relative h-full rounded-xl bg-linear-to-br from-[#050916] to-[#090a38] p-6 flex flex-col">
+                <div className="relative h-full rounded-xl bg-linear-to-br from-[#050916] to-[#090a38] p-4 sm:p-6 flex flex-col overflow-hidden">
 
                     {/* Title */}
-                    <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-transparent group-hover:bg-linear-to-r group-hover:bg-clip-text group-hover:from-purple-400 group-hover:to-pink-400 transition-all duration-300">
+                    <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 group-hover:text-transparent group-hover:bg-linear-to-r group-hover:bg-clip-text group-hover:from-purple-400 group-hover:to-pink-400 transition-all duration-300 wrap-break-word">
                         {title}
                     </h3>
 
                     {/* Description */}
-                    <p className="text-slate-400 text-sm leading-relaxed mb-4 grow">
+                    <p className="text-slate-400 text-sm leading-relaxed mb-4 grow wrap-break-word">
                         {description}
                     </p>
 
                     {/* Tags */}
-                    <div className="flex flex-wrap gap-2 mb-5">
+                    <div className="flex flex-wrap gap-2 mb-5 overflow-hidden">
                         {tags.map((tag, index) => (
                             <span
                                 key={index}
-                                className="px-3 py-1 text-xs font-medium rounded-full bg-white/5 text-slate-300 border border-white/10 hover:border-purple-400/50 hover:text-purple-400 transition-all duration-300"
+                                className="px-2 sm:px-3 py-1 text-xs font-medium rounded-full bg-white/5 text-slate-300 border border-white/10 hover:border-purple-400/50 hover:text-purple-400 transition-all duration-300 whitespace-nowrap"
                             >
                                 {tag}
                             </span>
@@ -93,7 +93,7 @@ function ProjectCard({ title, description, tags, githubLink, liveLink, gradient 
                     </div>
 
                     {/* Links */}
-                    <div className="flex gap-3">
+                    <div className="flex flex-wrap gap-2 sm:gap-3">
                         <a
                             href={githubLink}
                             target="_blank"
@@ -124,25 +124,25 @@ function ProjectCard({ title, description, tags, githubLink, liveLink, gradient 
 
 export default function Project() {
     return (
-        <section className="relative mt-20 mb-10" id="projects">
+        <section className="relative mt-20 mb-10 overflow-hidden" id="projects">
             {/* Section Header */}
             <div className="mb-12">
                 <h2 className="text-md md:text-lg text-slate-500 uppercase tracking-wider">Portfolio</h2>
-                <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">Featured Projects</h1>
-                <p className="text-slate-400 text-lg max-w-2xl">
+                <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 wrap-break-word">Featured Projects</h1>
+                <p className="text-slate-400 text-base md:text-lg max-w-2xl">
                     Explore my recent work showcasing full-stack development, modern UI/UX, and innovative solutions.
                 </p>
             </div>
 
             {/* Projects Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-12">
                 {projects.map((project, index) => (
                     <ProjectCard key={index} {...project} />
                 ))}
             </div>
 
             {/* View All Projects Button */}
-            <div className="flex justify-center mt-16">
+            <div className="flex justify-center mt-16 px-4">
                 <Link
                     to="/projects"
                     className="group relative inline-flex items-center gap-3 px-8 py-4 rounded-full overflow-hidden transition-all duration-300 hover:scale-105"
@@ -161,9 +161,9 @@ export default function Project() {
                 </Link>
             </div>
 
-            {/* Decorative Elements */}
-            <div className="absolute top-1/4 -right-20 w-40 h-40 bg-purple-500/10 rounded-full blur-3xl pointer-events-none"></div>
-            <div className="absolute bottom-1/4 -left-20 w-40 h-40 bg-pink-500/10 rounded-full blur-3xl pointer-events-none"></div>
+            {/* Decorative Elements - Hidden on mobile to prevent overflow */}
+            <div className="absolute top-1/4 -right-20 w-40 h-40 bg-purple-500/10 rounded-full blur-3xl pointer-events-none hidden md:block"></div>
+            <div className="absolute bottom-1/4 -left-20 w-40 h-40 bg-pink-500/10 rounded-full blur-3xl pointer-events-none hidden md:block"></div>
         </section>
     );
 }

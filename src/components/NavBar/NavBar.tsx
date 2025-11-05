@@ -52,14 +52,14 @@ export default function NavBar() {
                         <div className="space-y-6 border-t  px-4 py-6">
                             {navigation.pages.map((page) => (
                                 <div key={page.name} className="flow-root">
-                                    <a href={page.href} className="-m-2 block p-2 font-medium text-white hover:text-slate-300">
+                                    <a href={page.href}  onClick={() => setOpen(false)} className="-m-2 block p-2 font-medium text-white hover:text-slate-300">
                                         {page.name}
                                     </a>
                                 </div>
                             ))}
                         </div>
 
-                        <div className="space-y-6 border-t px-4 py-6">
+                        {/* <div className="space-y-6 border-t px-4 py-6">
                             <div className="flow-root">
                                 <a href="#" className="-m-2 block p-2 font-medium text-white hover:text-slate-300">
                                     Sign in
@@ -70,7 +70,7 @@ export default function NavBar() {
                                     Create account
                                 </a>
                             </div>
-                        </div>
+                        </div> */}
                     </DialogPanel>
                 </div>
             </Dialog>
