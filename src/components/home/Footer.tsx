@@ -1,5 +1,4 @@
-import React from 'react'
-import { FaGithub, FaLinkedin, FaFacebook, FaInstagram, FaHeart } from 'react-icons/fa'
+import { FaFacebook, FaGithub, FaHeart, FaInstagram, FaLinkedin } from 'react-icons/fa'
 import { HiMail, HiPhone } from 'react-icons/hi'
 import { IoLogoWhatsapp } from 'react-icons/io'
 

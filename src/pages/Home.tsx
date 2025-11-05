@@ -15,7 +15,7 @@ export default function Home() {
             <div className="overflow-visible font-sans  " id="">
                 <NavBar />
                 {/* <div className="xl:px-25 px-4 sm:px-6 lg:px-8 "> */}
-                <div className="container mx-auto xl:px-35 px-4 sm:px-6 lg:px-8  ">
+                <div className="container mx-auto xl:px-10 px-4 sm:px-5 lg:px-8  ">
                     <Hero />
                     <About />
                     <Timeline />
