@@ -356,17 +356,28 @@ export default function Timeline() {
             </div>
 
             {/* Header Section */}
-            <div className="text-center mb-16">
-                <h1 className="text-md md:text-xl text-slate-400 uppercase tracking-wider mb-3 animate-pulse">
-                    What I have done so far
-                </h1>
-                <h1 className="text-4xl md:text-6xl font-extrabold bg-linear-to-r from-violet-400 via-amber-400 to-cyan-400 bg-clip-text text-transparent drop-shadow-2xl">
-                    Qualifications & Experience
-                </h1>
-                <div className="mt-4 mx-auto w-32 h-1.5 bg-linear-to-r from-violet-500 via-amber-500 to-cyan-500 rounded-full shadow-lg"></div>
-                <p className="mt-4 text-slate-400 text-sm md:text-base max-w-2xl mx-auto">
-                    A journey through learning, building, and growing as a full-stack developer
-                </p>
+            <div className="text-center mb-16 space-y-6">
+                <div className="space-y-3">
+                    <p className="text-sm md:text-base text-slate-500 font-semibold uppercase tracking-wider">
+                        What I have done so far
+                    </p>
+                    <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold leading-none tracking-tight">
+                        <span className="block bg-linear-to-r from-white via-slate-100 to-white bg-clip-text text-transparent">
+                            Qualifications
+                        </span>
+                        <span className="block bg-linear-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+                            & Experience
+                        </span>
+                    </h1>
+                </div>
+                
+                <div className="flex flex-wrap items-center justify-center gap-3 mt-6">
+                    <span className="bg-linear-to-r from-violet-400 via-purple-500 to-fuchsia-500 bg-clip-text text-transparent font-semibold text-sm md:text-base">Education</span>
+                    <span className="text-slate-600">•</span>
+                    <span className="bg-linear-to-r from-yellow-400 via-orange-500 to-red-500 bg-clip-text text-transparent font-semibold text-sm md:text-base">Certifications</span>
+                    <span className="text-slate-600">•</span>
+                    <span className="bg-linear-to-r from-emerald-400 via-teal-500 to-cyan-500 bg-clip-text text-transparent font-semibold text-sm md:text-base">Work & Projects</span>
+                </div>
             </div>
 
             {/* Timeline Container */}

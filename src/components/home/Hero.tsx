@@ -6,7 +6,7 @@ import { SiSpringboot, SiTailwindcss } from 'react-icons/si'
 
 export default function Hero() {
     return (
-        <section className="relative min-h-screen flex items-center" id="hero">
+        <section className="relative min-h-screen flex items-center mt-5" id="hero">
 
             <div className="w-full">
                 <div className="grid lg:grid-cols-2 gap-12 lg:gap-18 items-center">
@@ -55,7 +55,7 @@ export default function Hero() {
                                 <span className="text-slate-600">•</span>
                                 <span className="bg-linear-to-r from-teal-400 via-cyan-400 to-sky-500 bg-clip-text text-transparent font-semibold text-sm sm:text-base">E-Commerce</span>
                                 <span className="text-slate-600">•</span>
-                                <span className="bg-linear-to-r from-indigo-400 via-purple-500 to-pink-500 bg-clip-text text-transparent font-semibold text-sm sm:text-base">Custom Web Apps</span>
+                                <span className="bg-linear-to-r from-indigo-400 via-purple-500 to-pink-500 bg-clip-text text-transparent font-semibold text-sm sm:text-base">Custom Applications</span>
                             </div>
                         </div>
 
