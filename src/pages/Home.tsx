@@ -3,6 +3,7 @@ import FloatingIcons from "../components/home/subcomponents/FloatingIcons"
 import Hero from "../components/home/Hero"
 import NavBar from "../components/NavBar/NavBar"
 import Timeline from "../components/home/Timeline"
+import Contact from "../components/home/Contact"
 // import image from "../assets/images/basic/img-2.png"
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
                     <Hero />
                     <About />
                     <Timeline />
+                    <Contact />
                 </div>
 
             </div>
