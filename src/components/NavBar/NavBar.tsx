@@ -99,7 +99,7 @@ export default function NavBar() {
                                     <img
                                         alt=""
                                         src={logo}
-                                        className="h-23 w-auto"
+                                        className="h-18 md:h-23 w-auto"
                                     />
                                 </a>
                             </div>

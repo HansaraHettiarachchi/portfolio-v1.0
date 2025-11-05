@@ -22,7 +22,7 @@ const jobs = [
 
 export default function About() {
     return (
-        <div className="relative" id="about">
+        <div className="relative mt-5" id="about">
             <h1 className="text-md md:text-lg text-slate-500 uppercase">Introduction</h1>
             <h1 className="text-4xl md:text-6xl font-bold text-white">Overview</h1>
 
